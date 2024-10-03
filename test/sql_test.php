@@ -2,9 +2,9 @@
     require_once '../core/sql.php';
 
     $id = 1;
-    $nome = 'Nicolas';
-    $email = 'nickeduardo2007@gmail.com';
-    $senha = '9Dfeiur4';
+    $nome = 'PedroArrieiro';
+    $email = "pedro_arrieiro@hotmail.com";
+    $senha = 'pedrin123';
     $dados = ['nome' => $nome,
               'email' => $email,
               'senha' => $senha];
@@ -18,20 +18,20 @@
     echo '<br>';
     print_r($criterio);
     echo '<br>';
-
-    // Teste geração INSERT
-    $instrucao = insert ($entidade, $dados);
-    echo $instrucao.'<BR>';
-
-    // Teste geração UPDATE
-    $instrucao = update ($entidade, $dados, $criterio);
-    echo $instrucao.'<BR>';
-
-    // Teste geração SELECT
-    $instrucao = select ($entidade, $campos, $criterio);
-    echo $instrucao. '<BR>';
     
-    // Teste geração DELETE
-    $instrucao = delete ($entidade, $criterio);
+    //Teste geração INSERT
+    $instrucao = insert ($entidade, $dados);
+    echo $instrucao . "<BR>";
+
+    //Teste geração UPDATE
+    $instrucao = update($entidade, $dados, $criterio);
+    echo $instrucao.'<BR>';
+
+    //Teste geração SELECT 
+    $instrucao = select($entidade, $campos, $criterio);
+    echo $instrucao.'<BR>';
+
+    //Teste geração DELETE
+    $instrucao = delete($entidade, $criterio);
     echo $instrucao.'<BR>';
 ?>

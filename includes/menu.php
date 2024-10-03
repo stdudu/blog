@@ -3,25 +3,25 @@
         Menu
     </div>
     <div class="card-body">
-        <ul>
-            <li class="nav-link">
-                <a href="index.php" class="nav-link">Home</a>
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link" href="index.php">Home</a>
             </li>
-            <li class="nav-link">
-                <a href="usuario_formulario.php" class="nav-link">Cadastre-se</a>
+            <li class="nav-item">
+                <a class="nav-link" href="usuario_formulario.php">Cadastre-se</a>
             </li>
-            <li class="nav-link">
-                <a href="login_formulario.php" class="nav-link">Login</a>
+            <li class="nav-item">
+                <a class="nav-link" href="login_formulario.php">Login</a>
             </li>
-            <li class="nav-link">
-                <a href="post_formulario.php" class="nav-link">Incluir Post</a>
+            <li class="nav-item">
+                <a class="nav-link" href="post_formulario.php">Incluir Post</a>
             </li>
-            <?php if((isset($_SESSION['login'])) && ($_SESSION['login']['usuario']['adm'] === 1)) : ?>
-            <li class="nav-link">
-                <a href="usuarios.php" class="nav-link">Usuarios</a>
+            <?php if((isset($_SESSION['login']))
+                && ($_SESSION['login']['usuario']['adm'] === 1)) : ?>
+            <li class="nav-item">
+                <a class="nav-link" href="usuarios.php">Usuários</a>
             </li>
-            <?php endif; ?>
+            <?php endif; ?>    
         </ul>
-
     </div>
 </div>
