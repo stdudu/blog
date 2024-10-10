@@ -11,6 +11,7 @@
                 <div class="col-md-12">
                     <!-- Topo //-->
                     <?php
+                    // funcao que chama o arquivo topo.php
                         include 'includes/topo.php';
                     ?>
                 </div>
@@ -19,6 +20,7 @@
                 <div class="col-md-12">
                     <!--Menu //-->
                     <?php
+                    // funcao que chama o arquivo menu.php
                         include 'includes/menu.php';
                     ?>
             </div>
@@ -26,6 +28,7 @@
                 <!--Conteúdo //-->
                 <h2>Página Inicial</h2>
                 <?php
+                // funcao que chama o arquivo busca.php
                     include 'includes/busca.php';
                 ?>
 

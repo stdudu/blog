@@ -1,5 +1,5 @@
 <?php
-
+// funcao que realiza a insercao de dados no bd
 function insere (string $entidade, array $dados) : bool
 {
     $retorno = false;
@@ -31,7 +31,7 @@ function insere (string $entidade, array $dados) : bool
 
     return $retorno;
 }
-
+// funcao que realiza o update de informações nas respectivas tabelas do bd
 function atualiza(string $entidade, array $dados, array $criterio = []) : bool
 {
     $retorno = false;
@@ -88,7 +88,7 @@ function atualiza(string $entidade, array $dados, array $criterio = []) : bool
 
     return $retorno;
 }
-
+// funcao que realiza o delete no bd
 function deleta(string $entidade, array $criterio = []) : bool
 {
         $retorno = false;
@@ -136,7 +136,7 @@ function deleta(string $entidade, array $criterio = []) : bool
 
     return $retorno;
 }
-
+// funcao que realiza a busca com base nos campos apresentados
 function buscar (string $entidade, array $campos = ['*'], array $criterio = [],
 string $ordem = null) : array
 {

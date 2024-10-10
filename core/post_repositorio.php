@@ -17,6 +17,7 @@ foreach($_GET as $indice => $dado) {
 $id = (int)$id;
 
 switch($acao){
+    // insere valores nos respectivos campos da entidade post
     case 'insert':
         $dados =[
             'titulo' => $titulo,
@@ -31,28 +32,25 @@ switch($acao){
         );
 
         break;
-
-        case 'update':
-            $dados = [
-                'titulo' => $titulo,
-                'texto' => $texto,
-                'data_postagem' => "$data_postagem $hora_postagem",
-                'usuario_id' => $_SESSION['login']['usuario']['id']
-            ];
-
-            $criterio = [
-                ['id', '=', $id]
-            ];
-
-            atualiza(
-                'post',
-                $dados,
-                $criterio
-            );
-
-            break;
-
-            case 'delete':
+    // atualiza valores nos respectivos campos da entidade post
+    case 'update':
+        $dados = [
+            'titulo' => $titulo,
+            'texto' => $texto,
+            'data_postagem' => "$data_postagem $hora_postagem",
+            'usuario_id' => $_SESSION['login']['usuario']['id']
+        ];
+        $criterio = [
+            ['id', '=', $id]
+        ];
+        atualiza(
+            'post',
+            $dados,
+            $criterio
+        );
+    break;
+    // deleta informações na tabela post 
+    case 'delete':
                 $criterio = [
                     ['id', '=', $id]
                 ];
@@ -62,7 +60,7 @@ switch($acao){
                     $criterio
                 );
 
-                break;
+    break;
 }
 
 header('Location: ../index.php');
